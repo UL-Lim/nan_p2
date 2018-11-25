@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+	<style>
+		@FONT-FACE{
+	font-family: "휴먼엑스포", "한컴돋움", "SM견출고딕 Std Regular", "SM견출명조 Std Regular";
+	src: url('HMFMMUEX_0.ttf','HDOTUM_0.ttf','SMKGothicStd-Regular.otf','SMKMyungJoStd-Regular.otf');
+	}
+		body{background-color:#000132}	
+	#ziry{position: absolute; top:0; left:0; padding:20px; font-family: 'SM견출명조 Std Regular', serif; font-size: 100px;font-weight:700;line-height:120px; color:white}
+	#ziry2{width:1000px; height:auto;position: absolute; top: 270px; left:430px; padding:20px; font-family: 'SM견출명조 Std Regular', serif; font-size: 2em; font-weight:500; line-height:1.5em; background-color:red;}
+		
+.center {width:600px;
+  position: absolute;
+  top:100px; bottom:0;
+  left:400px; right:0;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  opacity: 0.99;
+  font-family: 'SM견출명조 Std Regular', serif;
+  font-size: 50px;
+  text-align: center;}
+
+	</style>
+</head>
+
+<body>
+	<div id = "red"></div>
+	<div id="ziry"> 對공작원<br>교신법</div>
+	<div id="ziry2"> 난수방송 관련 페이지 될 예정입니다<br>(난수방송과 강박의 연결고리에 대해서는 고민중입니다)</div>
+	
+	<div class = "center">
+  	<span class="header center cherry" id="word"></span>
+	</div>
+	
+	<div class = "center2">
+  	<span class="header center cherry2" id="wordi"></span>
+	</div>
+
+	
+	<script type="text/javascript">
+
+		var word = document.getElementById('word');
+		var colors = ['#000000'];
+		var letters = ['0','1','2','3','4','5','6','7','8','9']; 
+		var skip = 75;
+		var counter = 0;
+		var swap = function() {
+
+			if(counter++ == skip) {
+
+  	randWord = letters[Math.floor(Math.random()*10)]
+	+ letters[Math.floor(Math.random()*10)]
+	+ letters[Math.floor(Math.random()*10)]
+    + letters[Math.floor(Math.random()*10)]
+    + letters[Math.floor(Math.random()*10)];
+	
+   	var k = document.getElementsByClassName("cherry");
+   	for(var i=0; i < k.length; i++){
+     k[i].innerHTML = randWord;
+	   
+   }
+    counter = 0;
+	
+  }
+  window.requestAnimationFrame(swap);
+}
+swap();
+		
+		var wordi = document.getElementById('wordi');
+		var colorsi = ['#000000'];
+		var lettersi = ['0','1','2','3','4','5','6','7','8','9']; 
+		var skipi = 75;
+		var counteri = 0;
+		var swapi = function() {
+
+			if(counteri++ == skipi) {
+
+  	randWordi = lettersi[Math.floor(Math.random()*10)]
+	+ lettersi[Math.floor(Math.random()*10)]
+	+ lettersi[Math.floor(Math.random()*10)]
+    + lettersi[Math.floor(Math.random()*10)]
+    + lettersi[Math.floor(Math.random()*10)];
+	
+   	var l = document.getElementsByClassName("cherry2");
+   	for(var i=0; i < l.length; i++){
+     l[i].innerHTML = randWordi;
+	   
+   }
+    counteri = 0;
+	
+  }
+  window.requestAnimationFrame(swapi);
+}
+swapi();
+	</script>
+</body>
+</html>
